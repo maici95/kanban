@@ -3,7 +3,7 @@
 
 const server = require('./server');
 
-const s = server('../db.json');
+const s = server('./db.json');
 
 
 
