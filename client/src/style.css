@@ -1,0 +1,13 @@
+* {
+    padding: 0;
+    margin: 0 auto;
+    list-style: none;
+}
+
+body {
+    background: #EFF0F4;
+    font-family: 'Baloo Tamma 2', cursive, Arial;
+    color: #333;
+
+    max-width: 960px;
+}

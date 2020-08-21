@@ -1,3 +1,15 @@
 {
-    "cards": []
+	"cards": [
+		{
+			"id": 1,
+			"name": "testing json server"
+		},
+		{
+			"name": "Kanban board",
+			"text": "create kanban board",
+			"points": "2",
+			"status": "0",
+			"id": "2"
+		}
+	]
 }

@@ -1,0 +1,31 @@
+
+
+.card-container {
+    width: 100%;
+    min-height: 100px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #fff;
+
+    box-shadow: 2px 2px 4px #666;
+
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.card-container h1 {
+    padding: 5px;
+    font-size: 18px!important;
+
+    font-weight: normal;
+
+}
+.card-container h1 span {
+    float: right;
+}
+.card-container p {
+    padding: 0 10px;
+    font-size: 14px;
+
+}
+
