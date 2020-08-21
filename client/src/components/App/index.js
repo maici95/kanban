@@ -7,6 +7,7 @@ import Card from '../Card';
 
 import ajax from '../../ajax';
 import CardColumn from '../CardColumn';
+import CardOverview from '../CardOverview';
 
 function App() {
 
@@ -46,6 +47,18 @@ function App() {
         card.then(res => {
             setCard(res[0]);
         });
+    }
+
+    function closeCard() {
+        setCard(null);
+    }
+
+    function saveCard(obj) {
+        const data = new ajax().patch('cards', obj);
+        data.then(res => {
+            closeCard();
+            getform();
+        });
 
     }
 
@@ -63,7 +76,11 @@ function App() {
 
     return (
         <div>
-            {card && console.log(card)}
+            {card && <CardOverview
+                data={card}
+                close={closeCard}
+                save={saveCard}
+            />}
             <div className="navbar" style={{width:'100%', height: '60px', background: '#333'}}></div>
 
             <div style={{display: 'flex'}}>

@@ -118,7 +118,7 @@ app.patch('/*/:id', async (req, res) => {
     const id = req.params.id;
 
     if (data[path]) {
-        const index = data[path].findIndex(item => item.id === id);
+        const index = data[path].findIndex(item => item.id == id);
    
         if ((index === 0 || index) && index !== -1) {
             data[path][index] = { ...data[path][index], ...req.body }

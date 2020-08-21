@@ -1,0 +1,32 @@
+
+
+.card-overview-container {
+    position: absolute;
+    margin-top: 132px;
+    margin-left: 20%;
+    width: 60%;
+    min-height: 200px;
+    overflow: auto;
+    background: #fff;
+    box-shadow: 2px 2px 4px #333;
+    border-radius: 5px;
+}
+
+.card-overview-container h1 {
+    padding: 20px;
+    color: #444;
+    font-size: 24px;
+}
+
+.card-overview-container h1 span {
+    float: right;
+}
+
+
+.name-edit-field {
+    font-size: 24px;
+    font-family: 'Baloo Tamma 2', cursive, Arial;
+    font-weight: bold;
+    color: #444;
+}
+
