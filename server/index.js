@@ -50,23 +50,22 @@ app.get('/*', async (req, res) => {
 
         if (path) {
             data = data[path];
-            if (Object.keys(req.body).length > 0 && data) {
-                data = data.filter(item => {
-                    let match = true;
-                    for (let key in req.body) {
-                        if (item[key] !== req.body[key]) {
-                            match = false;
-                        }
-                    }
-                    if (match) {
-                        return item;
+            data = data.filter(item => {
+                let match = true;
+                Object.keys(req.query).forEach(key => {
+                    if (req.query[key] != item[key]) {
+                        match = false;
                     }
                 });
-            }
+                if (match) {
+                    return item;
+                } else {
+                    return;
+                }
+            });       
         }
         res.send(data); 
     }
-
 });
 
 app.post('/*', async (req, res) => {

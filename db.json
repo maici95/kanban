@@ -1,15 +1,63 @@
 {
-	"cards": [
-		{
-			"id": 1,
-			"name": "testing json server"
-		},
-		{
-			"name": "Kanban board",
-			"text": "create kanban board",
-			"points": "2",
-			"status": "0",
-			"id": "2"
-		}
-	]
+	"cards": [{
+		"id": 1,
+		"name": "vel pede morbi porttitor lorem id ligula suspendisse",
+		"points": 3,
+		"status": 2,
+		"text": "massa donec dapibus duis at velit eu est congue elementum in hac habitasse platea dictumst morbi vestibulum velit id"
+	  }, {
+		"id": 2,
+		"name": "ut suscipit a feugiat",
+		"points": 6,
+		"status": 0,
+		"text": "a odio in hac habitasse platea dictumst maecenas ut massa quis augue"
+	  }, {
+		"id": 3,
+		"name": "ut mauris eget massa tempor",
+		"points": 3,
+		"status": 1,
+		"text": "platea dictumst aliquam augue quam sollicitudin vitae consectetuer eget rutrum"
+	  }, {
+		"id": 4,
+		"name": "vulputate vitae nisl aenean lectus",
+		"points": 4,
+		"status": 2,
+		"text": "nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat eros viverra eget congue eget semper rutrum nulla"
+	  }, {
+		"id": 5,
+		"name": "odio cras mi pede",
+		"points": 2,
+		"status": 2,
+		"text": "dui proin leo odio porttitor id consequat in consequat ut nulla sed accumsan"
+	  }, {
+		"id": 6,
+		"name": "semper rutrum nulla nunc purus phasellus",
+		"points": 5,
+		"status": 0,
+		"text": "in faucibus orci luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est"
+	  }, {
+		"id": 7,
+		"name": "ante ipsum primis in faucibus orci",
+		"points": 4,
+		"status": 2,
+		"text": "sit amet lobortis sapien sapien non mi integer ac neque duis bibendum morbi non quam"
+	  }, {
+		"id": 8,
+		"name": "ante vestibulum ante ipsum primis in",
+		"points": 6,
+		"status": 1,
+		"text": "sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus etiam vel augue vestibulum rutrum"
+	  }, {
+		"id": 9,
+		"name": "dolor sit amet consectetuer adipiscing elit proin interdum",
+		"points": 2,
+		"status": 2,
+		"text": "dictumst morbi vestibulum velit id pretium iaculis diam erat fermentum justo nec condimentum neque sapien placerat"
+	  }, {
+		"id": 10,
+		"name": "ut massa quis augue luctus",
+		"points": 3,
+		"status": 1,
+		"text": "at feugiat non pretium quis lectus suspendisse potenti in eleifend"
+	  }]
 }

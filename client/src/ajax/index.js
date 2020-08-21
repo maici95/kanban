@@ -21,12 +21,19 @@ async function ajaxcall(method, path, body) {
         }
     }
 
+    if (path) {
+        url += '/' + path;
+    }
+
     if (method === 'post') {
         options.body = JSON.stringify(body);
     }
 
-    if (path) {
-        url += '/' + path;
+    if (method === 'get' && body) {
+        url += '?';
+        Object.keys(body).forEach(key => {
+            url += '&'+key+'='+body[key];
+        });
     }
 
     const data = await fetch(url, options)

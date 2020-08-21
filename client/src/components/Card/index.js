@@ -8,7 +8,9 @@ import './style.css';
 function Card(props) {
 
     return (
-        <div className="card-container">
+        <div className="card-container"
+            onClick={() => props.onClick(props.data.id)}
+        >
             <h1>
                 {props.data.name || 'card title'}
                 <span>
