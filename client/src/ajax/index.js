@@ -27,7 +27,10 @@ async function ajaxcall(method, path, body) {
     }
 
     if (method === 'POST' || method === 'PATCH') {
-        options.body = JSON.stringify(body);
+        options.body = JSON.stringify({
+            ...body,
+            updated: new Date().toISOString().slice(0, 10)
+        });
     }
 
     if (method === 'GET' && body) {

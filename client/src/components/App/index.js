@@ -12,19 +12,26 @@ import CardOverview from '../CardOverview';
 function App() {
 
     const [cards, setCards] = React.useState([]);
+    const [users, setUsers] = React.useState([]);
+
     const [loaded, setLoaded] = React.useState(false);
 
     const [card, setCard] = React.useState(null);
+
 
     React.useEffect(() => {
         if (!loaded) {
             getform();
             setLoaded(true);
+
+            new ajax().get('users').then(res => {
+                setUsers(res);
+            });
         }
 
     }, [loaded]);
 
-    function postform() {
+/*     function postform() {
         const body = {
             name: 'Kanban board',
             points: '2',
@@ -33,7 +40,7 @@ function App() {
         const data = new ajax().post('cards', body);
         data.then(res => {
         });
-    }
+    } */
     function getform() {
         const data = new ajax().get('cards', {});
         data.then(res => {
@@ -71,8 +78,11 @@ function App() {
                     data={card}
                 />
             }
-        })
+            return null;
+        });
     }
+
+
 
     return (
         <div>
@@ -80,6 +90,7 @@ function App() {
                 data={card}
                 close={closeCard}
                 save={saveCard}
+                users={users}
             />}
             <div className="navbar" style={{width:'100%', height: '60px', background: '#333'}}></div>
 
