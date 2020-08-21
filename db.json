@@ -1,3 +1,111 @@
 {
-    "cards": []
+	"cards": [
+		{
+			"id": 1,
+			"name": "vel pede morbi porttitor lorem id ligula suspendisse",
+			"points": "5",
+			"status": "0",
+			"text": "massa donec dapibus duis at velit eu est congue elementum in hac habitasse platea dictumst morbi vestibulum velit id",
+			"userId": "2",
+			"updated": "2020-08-21"
+		},
+		{
+			"id": 2,
+			"name": "ut suscipit a feugiat",
+			"points": "6",
+			"status": "0",
+			"text": "a odio in hac habitasse platea dictumst maecenas ut massa quis augue",
+			"userId": "5",
+			"updated": "2020-08-21"
+		},
+		{
+			"id": 3,
+			"name": "Card number 3",
+			"points": "4",
+			"status": "2",
+			"text": "Replacing text for this textarea",
+			"userId": "2",
+			"updated": "2020-08-21"
+		},
+		{
+			"id": 4,
+			"name": "vulputate vitae nisl aenean lectus",
+			"points": "4",
+			"status": "1",
+			"text": "nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat eros viverra eget congue eget semper rutrum nulla",
+			"userId": "2",
+			"updated": "2020-08-21"
+		},
+		{
+			"id": 5,
+			"name": "odio cras mi pede",
+			"points": "2",
+			"status": "1",
+			"text": "dui proin leo odio porttitor id consequat in consequat ut nulla sed accumsan",
+			"userId": "2",
+			"updated": "2020-08-21"
+		},
+		{
+			"id": 6,
+			"name": "semper test nulla nunc purus phasellus",
+			"points": "5",
+			"status": "0",
+			"text": "in faucibus orci luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est",
+			"userId": "2",
+			"updated": "2020-08-21"
+		},
+		{
+			"id": 7,
+			"name": "ante ipsum primis in faucibus orci",
+			"points": "4",
+			"status": "0",
+			"text": "sit amet lobortis sapien sapien non mi integer ac neque duis bibendum morbi non quam",
+			"userId": "2",
+			"updated": "2020-08-21"
+		},
+		{
+			"id": 8,
+			"name": "Create json server",
+			"points": "45",
+			"status": "2",
+			"text": "sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus etiam vel augue vestibulum rutrum",
+			"userId": "2",
+			"updated": "2020-08-21"
+		},
+		{
+			"id": 9,
+			"name": "title too long",
+			"points": "44",
+			"status": "1",
+			"text": "dictumst morbi vestibulum velit id pretium iaculis diam erat fermentum justo nec condimentum neque sapien placerat",
+			"userId": "5",
+			"updated": "2020-08-21"
+		},
+		{
+			"id": 10,
+			"name": "testing",
+			"points": "1",
+			"status": "1",
+			"text": "test",
+			"userId": "4",
+			"updated": "2020-08-21"
+		}
+	],
+	"users": [
+		{
+			"id": 2,
+			"name": "maici",
+			"color": "#FF2372"
+		},
+		{
+			"id": 4,
+			"name": "mike",
+			"color": "#FFF64F"
+		},
+		{
+			"id": 5,
+			"name": "johana",
+			"color": "#46E4C1"
+		}
+	]
 }

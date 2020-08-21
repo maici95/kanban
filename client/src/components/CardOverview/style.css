@@ -1,0 +1,69 @@
+
+
+.card-overview-container {
+    position: absolute;
+    margin-top: 132px;
+    margin-left: 20%;
+    width: 60%;
+    min-height: 200px;
+    overflow: auto;
+    background: #fff;
+    box-shadow: 2px 2px 4px #333;
+    border-radius: 5px;
+}
+
+.card-overview-container h1 {
+    padding: 20px;
+    color: #444;
+    font-size: 24px;
+}
+
+.card-overview-container h1 span {
+    float: right;
+}
+
+
+.card-content-panel {
+    padding: 0 40px;
+    display: flex;
+    flex-flow: column;
+}
+
+.card-content-panel h2 {
+    text-align: left;
+    width: 100%;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.card-content-panel textarea,
+.name-edit-field,
+.card-content-panel input,
+.card-content-panel select
+{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: 'Baloo Tamma 2', cursive, Arial;
+    border: 1px solid #ddd;
+}
+.card-content-panel select {
+    width: 100%;
+}
+
+.card-content-panel textarea:focus,
+.name-edit-field:focus,
+.card-content-panel input:focus,
+.card-content-panel select:focus
+{
+    outline: none;
+}
+
+.name-edit-field {
+    font-size: 24px;
+    width: 80%;
+    font-weight: bold;
+    color: #444;
+
+}
+

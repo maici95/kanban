@@ -6,10 +6,13 @@ const express = require('express');
 
 const fs = require('fs');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 
 const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
+app.use(cors());
+
 
 let filePath = null;
 
@@ -47,23 +50,22 @@ app.get('/*', async (req, res) => {
 
         if (path) {
             data = data[path];
-            if (Object.keys(req.body).length > 0 && data) {
-                data = data.filter(item => {
-                    let match = true;
-                    for (let key in req.body) {
-                        if (item[key] !== req.body[key]) {
-                            match = false;
-                        }
-                    }
-                    if (match) {
-                        return item;
+            data = data.filter(item => {
+                let match = true;
+                Object.keys(req.query).forEach(key => {
+                    if (req.query[key] != item[key]) {
+                        match = false;
                     }
                 });
-            }
+                if (match) {
+                    return item;
+                } else {
+                    return;
+                }
+            });       
         }
         res.send(data); 
     }
-
 });
 
 app.post('/*', async (req, res) => {
@@ -116,7 +118,7 @@ app.patch('/*/:id', async (req, res) => {
     const id = req.params.id;
 
     if (data[path]) {
-        const index = data[path].findIndex(item => item.id === id);
+        const index = data[path].findIndex(item => item.id == id);
    
         if ((index === 0 || index) && index !== -1) {
             data[path][index] = { ...data[path][index], ...req.body }
