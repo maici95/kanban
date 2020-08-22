@@ -7,8 +7,10 @@ import ajax from '../../ajax';
 
 import './style.css';
 
-function Card(props) {
 
+Card.NewCard = NewCard;
+
+function Card(props) {
     const [user, setUser] = React.useState(null);
 
     React.useEffect(() => {
@@ -36,9 +38,20 @@ function Card(props) {
             {user &&
                 <div className="user-panel">
                     <h3 style={{background: user.color}}>{user.name[0]}</h3>
-                    <span>&#9889; {props.data.updated}</span>
+                    <span>last: {props.data.updated}</span>
                 </div>
             }
+        </div>
+    );
+}
+
+function NewCard(props) {
+
+    return (
+        <div className="card-container newcard-btn"
+            onClick={props.onClick}
+        >
+            {props.children}
         </div>
     );
 }
