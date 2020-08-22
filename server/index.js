@@ -100,7 +100,7 @@ app.delete('/*/:id', async (req, res) => {
     const id = req.params.id;
 
     if (data[path]) {
-        const index = data[path].findIndex(item => item.id === id);
+        const index = data[path].findIndex(item => item.id == id);
         if ((index === 0 || index) && index !== -1) {
             data[path].splice(index, 1);
             write(data);

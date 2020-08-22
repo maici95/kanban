@@ -6,7 +6,7 @@ function ajax() {
     this.get = (path, body) => ajaxcall('GET', path, body);
     this.post = (path, body) => ajaxcall('POST', path, body);
     
-    this.delete = (path) => ajaxcall('DELETE', path);
+    this.delete = (path, body) => ajaxcall('DELETE', path, body);
     this.patch = (path, body) => ajaxcall('PATCH', path, body);
 
 }
@@ -40,7 +40,7 @@ async function ajaxcall(method, path, body) {
         });
     }
 
-    if (method === 'PATCH') {
+    if (method === 'PATCH' || method === 'DELETE') {
         url += '/' + body.id;
     }
 

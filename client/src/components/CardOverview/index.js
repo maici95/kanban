@@ -8,13 +8,14 @@ import ButtonPanel from '../ButtonPanel';
 
 function CardOverview(props) {
 
-    const [editMode, setEditMode] = React.useState(false);
 
     const nameRef = React.useRef(null);
     const textRef = React.useRef(null);
     const pointRef = React.useRef(null);
     const statusRef = React.useRef(null);
     const userRef = React.useRef(null);
+
+    const [deleteBtn, setDeleteBtn] = React.useState(true);
 
     function saveCard() {
         props.save({
@@ -27,24 +28,17 @@ function CardOverview(props) {
         });
     }
 
+    function handleDelete(event) {
+        if (event.target.value === 'DELETE') {
+            setDeleteBtn(false);
+        } else {
+            setDeleteBtn(true);
+        }
+    }
+
     return (
         <div className="card-overview-container">
-            {editMode &&
-            <>
-                <h1>{props.data.name}<span>#{props.data.id}</span></h1>
 
-                <div className="card-content-panel">
-
-                </div>
-
-                <ButtonPanel>
-                    <button onClick={() => setEditMode(true)}>edit</button>
-                    <button onClick={props.close}>close</button>
-                </ButtonPanel>
-            </>
-            }
-            {!editMode &&
-            <>
                 <h1>
                     <input className="name-edit-field" ref={nameRef} defaultValue={props.data.name}/>
                     <span>#{props.data.id}</span>
@@ -77,9 +71,11 @@ function CardOverview(props) {
                 <ButtonPanel>
                     <button onClick={saveCard}>save</button>
                     <button onClick={props.close}>close</button>
+                    <ButtonPanel.Right>
+                        <input placeholder="DELETE" onChange={handleDelete} />
+                        <button onClick={() => props.delete(props.data.id)} disabled={deleteBtn}>delete</button>
+                    </ButtonPanel.Right>
                 </ButtonPanel>
-            </>
-            }
 
         </div>
     );
