@@ -17,11 +17,12 @@ function CardOverview(props) {
     const userRef = React.useRef(null);
     const deadlineRef = React.useRef(null);
 
+    const [rel, setRel] = React.useState(false);
     const [deleteBtn, setDeleteBtn] = React.useState(true);
     const [comments, setComments] = React.useState([]);
 
     function reload() {
-        console.log('wow comments were fetched');
+        setRel(!rel);
     }
 
     function saveCard() {
@@ -49,7 +50,7 @@ function CardOverview(props) {
         data.then(res => {
             setComments(res);
         });
-    }, [props.data.id, reload]);
+    }, [props.data.id, rel]);
 
     return (
         <div className="card-overview-container" id="card-overview">
@@ -103,6 +104,7 @@ function CardOverview(props) {
                             <CommentPanel.Comment
                                 key={index}
                                 userId={comment.userId}
+                                updated={comment.updated}
                             >
                                 <p>{comment.text}</p>
                             </CommentPanel.Comment>

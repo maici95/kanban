@@ -46,7 +46,7 @@
 			"text": "User can write, read, edit and delete comments on cards.",
 			"userId": "2",
 			"updated": "2020-08-22",
-			"deadline": "2020/08/23",
+			"deadline": "2020/08/24",
 			"id": "16"
 		},
 		{
@@ -90,16 +90,6 @@
 			"id": "20"
 		},
 		{
-			"name": "test",
-			"points": "0",
-			"status": "1",
-			"text": "",
-			"userId": "2",
-			"updated": "2020-08-22",
-			"deadline": "2030/1/1",
-			"id": "21"
-		},
-		{
 			"name": "Add notification system",
 			"points": "0",
 			"status": "0",
@@ -108,6 +98,16 @@
 			"updated": "2020-08-22",
 			"deadline": "0",
 			"id": "22"
+		},
+		{
+			"name": "Test TODAY",
+			"points": "0",
+			"status": "1",
+			"text": "Seems to work",
+			"userId": "2",
+			"updated": "2020-08-22",
+			"deadline": "0",
+			"id": "23"
 		}
 	],
 	"users": [
@@ -127,5 +127,27 @@
 			"color": "#46E4C1"
 		}
 	],
-	"comments": []
+	"comments": [
+		{
+			"cardId": "21",
+			"text": "",
+			"userId": "2",
+			"updated": "2020-08-22",
+			"id": "1"
+		},
+		{
+			"cardId": "21",
+			"text": "tee",
+			"userId": "2",
+			"updated": "2020-08-22",
+			"id": "2"
+		},
+		{
+			"cardId": "23",
+			"text": "Testing commenting...",
+			"userId": "2",
+			"updated": "2020-08-22",
+			"id": "3"
+		}
+	]
 }

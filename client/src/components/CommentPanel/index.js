@@ -57,7 +57,7 @@ function Comment(props) {
             {props.children}
             {user &&
                 <div>
-                    <b>posted by:</b> {user.name}
+                    <b>posted by:</b> {user.name} - <small>{props.updated}</small>
                 </div>
             }
         </div>

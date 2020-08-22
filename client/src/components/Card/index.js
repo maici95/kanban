@@ -21,6 +21,7 @@ function Card(props) {
         }
     }, [props.data.userId]);
 
+    const days = Math.floor((new Date(props.data.deadline) - new Date()) / 1000 / 60 / 60 / 24);
 
     return (
         <div className="card-container"
@@ -43,7 +44,7 @@ function Card(props) {
                         {props.data.deadline && props.data.status !== "0" &&
                             <span>
                                 {props.data.status === '1' &&
-                                    Math.floor((new Date(props.data.deadline) - new Date()) / 1000 / 60 / 60 / 42) + 'days'
+                                    (days > 0 ? days + ' days' : 'TODAY')
                                 }
                                 {props.data.status === '2' &&
                                     'done'
