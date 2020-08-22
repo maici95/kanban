@@ -1,85 +1,113 @@
 {
 	"cards": [
 		{
-			"id": 1,
-			"name": "Add new card feature",
-			"points": "2",
+			"name": "CLEAN CODE!",
+			"points": "100",
 			"status": "0",
-			"text": "User can add new card to the board.",
+			"text": "Rewrite most of the code!",
 			"userId": "2",
-			"updated": "2020-08-22"
+			"updated": "2020-08-22",
+			"id": "12"
 		},
 		{
-			"id": 2,
-			"name": "Clean code",
-			"points": "10",
+			"name": "Add account feature",
+			"points": "0",
 			"status": "0",
-			"text": "Code needs reworking",
-			"userId": "5",
-			"updated": "2020-08-22"
+			"text": "User can create an account.",
+			"userId": "2",
+			"updated": "2020-08-22",
+			"id": "13",
+			"deadline": "2020/09/20"
 		},
 		{
-			"id": 3,
-			"name": "Card number 3",
-			"points": "4",
+			"name": "Add deadline to cards",
+			"points": "0",
 			"status": "2",
-			"text": "Replacing text for this textarea",
+			"text": "Display remaining days on card before deadline. Show days remaining only on cards that are not in \"To Do\" column.",
 			"userId": "2",
-			"updated": "2020-08-21"
+			"updated": "2020-08-22",
+			"id": "14",
+			"deadline": "2020/10/30"
 		},
 		{
-			"id": 4,
-			"name": "vulputate vitae nisl aenean lectus",
-			"points": "4",
+			"name": "Add priority to cards",
+			"points": "0",
+			"status": "0",
+			"text": "Add priority to cards and order cards on columns by their priority.",
+			"userId": "2",
+			"updated": "2020-08-22",
+			"deadline": "0",
+			"id": "15"
+		},
+		{
+			"name": "Add commenting feature to cards",
+			"points": "0",
 			"status": "1",
-			"text": "nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat eros viverra eget congue eget semper rutrum nulla",
-			"userId": "4",
-			"updated": "2020-08-22"
-		},
-		{
-			"id": 5,
-			"name": "Add card delete feature",
-			"points": "4",
-			"status": "2",
-			"text": "dui proin leo odio porttitor id consequat in consequat ut nulla sed accumsan",
+			"text": "User can write, read, edit and delete comments on cards.",
 			"userId": "2",
-			"updated": "2020-08-22"
+			"updated": "2020-08-22",
+			"deadline": "2020/08/23",
+			"id": "16"
 		},
 		{
-			"id": 6,
-			"name": "semper test nulla nunc purus phasellus",
-			"points": "5",
+			"name": "Draw statistics",
+			"points": "0",
 			"status": "0",
-			"text": "in faucibus orci luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est",
+			"text": "Design and create statistics views to be shown on screen to users. Users can track their progress.",
 			"userId": "2",
-			"updated": "2020-08-21"
+			"updated": "2020-08-22",
+			"deadline": "0",
+			"id": "17"
 		},
 		{
-			"id": 7,
-			"name": "ante ipsum primis in faucibus orci",
-			"points": "4",
+			"name": "Improve cards' readability",
+			"points": "0",
 			"status": "0",
-			"text": "sit amet lobortis sapien sapien non mi integer ac neque duis bibendum morbi non quam",
+			"text": "Implement pagination for cards or something similar",
 			"userId": "2",
-			"updated": "2020-08-21"
+			"updated": "2020-08-22",
+			"deadline": "0",
+			"id": "18"
 		},
 		{
-			"id": 8,
-			"name": "Create json server",
-			"points": "45",
-			"status": "2",
-			"text": "sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus etiam vel augue vestibulum rutrum",
+			"name": "Make columns customisable",
+			"points": "0",
+			"status": "0",
+			"text": "User can create, delete or edit columns to their liking.",
 			"userId": "2",
-			"updated": "2020-08-21"
+			"updated": "2020-08-22",
+			"deadline": "0",
+			"id": "19"
 		},
 		{
-			"name": "test add card feature",
-			"points": "2",
-			"status": "2",
+			"name": "Add dragging to cards",
+			"points": "0",
+			"status": "0",
+			"text": "User can drag cards to columns",
+			"userId": "2",
+			"updated": "2020-08-22",
+			"deadline": "0",
+			"id": "20"
+		},
+		{
+			"name": "test",
+			"points": "0",
+			"status": "1",
 			"text": "",
 			"userId": "2",
 			"updated": "2020-08-22",
-			"id": "10"
+			"deadline": "2030/1/1",
+			"id": "21"
+		},
+		{
+			"name": "Add notification system",
+			"points": "0",
+			"status": "0",
+			"text": "Give feedback to user after action. Example after posting comment display message to user if action was succesfully or and error occured.",
+			"userId": "2",
+			"updated": "2020-08-22",
+			"deadline": "0",
+			"id": "22"
 		}
 	],
 	"users": [
@@ -98,5 +126,6 @@
 			"name": "johana",
 			"color": "#46E4C1"
 		}
-	]
+	],
+	"comments": []
 }

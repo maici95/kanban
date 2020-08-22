@@ -22,7 +22,7 @@ function App() {
 
     React.useEffect(() => {
         if (!loaded) {
-            getform();
+            getCards();
             setLoaded(true);
 
             new ajax().get('users').then(res => {
@@ -32,17 +32,8 @@ function App() {
 
     }, [loaded]);
 
-/*     function postform() {
-        const body = {
-            name: 'Kanban board',
-            points: '2',
-            status: '0'
-        }
-        const data = new ajax().post('cards', body);
-        data.then(res => {
-        });
-    } */
-    function getform() {
+
+    function getCards() {
         const data = new ajax().get('cards', {});
         data.then(res => {
             setCards(res);
@@ -56,11 +47,12 @@ function App() {
             status: 0,
             text: '',
             userId: null,
-            updated: null
+            updated: null,
+            deadline: 0
         });
         data.then(res => {
             setAddCardStatus(false);
-            getform();
+            getCards();
         });
     }
 
@@ -68,6 +60,9 @@ function App() {
         const card = new ajax().get('cards', { id: cardId });
         card.then(res => {
             setCard(res[0]);
+
+            //document.getElementById('card-overview').scrollIntoView();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     }
 
@@ -79,7 +74,7 @@ function App() {
         const data = new ajax().patch('cards', obj);
         data.then(res => {
             closeCard();
-            getform();
+            getCards();
         });
     }
 
@@ -87,11 +82,11 @@ function App() {
         const data = new ajax().delete('cards', { id: id } );
         data.then(res => {
             closeCard();
-            getform();
+            getCards();
         });
     }
 
-    function getCards(status) {
+    function filterCards(status) {
         return cards.map((card, index) => {
             if (parseInt(card.status) === status) {
                 return <Card
@@ -125,10 +120,8 @@ function App() {
                         <Card.NewCard>
                             <ButtonPanel>
                                 <input ref={cardNameRef} placeholder="name..." />
-                                <ButtonPanel.Right>
-                                    <button onClick={addCard}>add</button>
-                                    <button onClick={() => setAddCardStatus(false)}>cancel</button>
-                                </ButtonPanel.Right>
+                                <button onClick={addCard}>add</button>
+                                <button onClick={() => setAddCardStatus(false)}>cancel</button>
                             </ButtonPanel>
                         </Card.NewCard>
                     }
@@ -138,15 +131,15 @@ function App() {
                         </Card.NewCard>
                     }
 
-                    {getCards(0)}
+                    {filterCards(0)}
                 </CardColumn>
                 <CardColumn>
                     <h1>In Progress</h1>
-                    {getCards(1)}
+                    {filterCards(1)}
                 </CardColumn>
                 <CardColumn>
                     <h1>Completed</h1>
-                    {getCards(2)}
+                    {filterCards(2)}
                 </CardColumn>
             </div>
 

@@ -33,11 +33,10 @@
 
 .card-container h4 {
     text-align: center;
-    padding: 5px 0;
-    font-size: 20px;
+    font-size: 24px;
 }
 .newcard-btn:hover {
-    background: #ddd;
+    background: #EBEBEB;
 }
 
 
@@ -60,9 +59,11 @@
     border-radius: 100%;
     font-weight: bold;
     font-size: 20px!important;
-    box-shadow: 2px 2px 4px #666;
+    box-shadow: 2px 2px 4px #333;
     text-shadow: 1px 1px 0 #000;
+    background: #ddd;
     color: #fff;
+    border: 2px solid #333;
 }
 .user-panel span {
     float: right;

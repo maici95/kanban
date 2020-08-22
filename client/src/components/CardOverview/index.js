@@ -5,17 +5,24 @@ import React from 'react';
 
 import './style.css';
 import ButtonPanel from '../ButtonPanel';
+import CommentPanel from '../CommentPanel';
+import ajax from '../../ajax';
 
 function CardOverview(props) {
-
 
     const nameRef = React.useRef(null);
     const textRef = React.useRef(null);
     const pointRef = React.useRef(null);
     const statusRef = React.useRef(null);
     const userRef = React.useRef(null);
+    const deadlineRef = React.useRef(null);
 
     const [deleteBtn, setDeleteBtn] = React.useState(true);
+    const [comments, setComments] = React.useState([]);
+
+    function reload() {
+        console.log('wow comments were fetched');
+    }
 
     function saveCard() {
         props.save({
@@ -23,6 +30,7 @@ function CardOverview(props) {
             text: textRef.current.value,
             points: pointRef.current.value,
             status: statusRef.current.value,
+            deadline: deadlineRef.current.value,
             userId: userRef.current.value,
             id: props.data.id
         });
@@ -36,8 +44,15 @@ function CardOverview(props) {
         }
     }
 
+    React.useEffect(() => {
+        const data = new ajax().get('comments', { cardId: props.data.id });
+        data.then(res => {
+            setComments(res);
+        });
+    }, [props.data.id, reload]);
+
     return (
-        <div className="card-overview-container">
+        <div className="card-overview-container" id="card-overview">
 
                 <h1>
                     <input className="name-edit-field" ref={nameRef} defaultValue={props.data.name}/>
@@ -57,6 +72,8 @@ function CardOverview(props) {
                             <option value="1">In Progress</option>
                             <option value="2">Completed</option>
                         </select>
+                    <h2>deadline:</h2>
+                        <input ref={deadlineRef} defaultValue={props.data.deadline} />
                     <h2>user:</h2>
                         <select ref={userRef} defaultValue={props.data.userId}>
                             {props.users.map((user, index) => {
@@ -76,6 +93,22 @@ function CardOverview(props) {
                         <button onClick={() => props.delete(props.data.id)} disabled={deleteBtn}>delete</button>
                     </ButtonPanel.Right>
                 </ButtonPanel>
+
+                <CommentPanel
+                    cardId={props.data.id}
+                    commentPosted={reload}
+                >
+                    {comments.map((comment, index) => {
+                        return (
+                            <CommentPanel.Comment
+                                key={index}
+                                userId={comment.userId}
+                            >
+                                <p>{comment.text}</p>
+                            </CommentPanel.Comment>
+                        );
+                    })}
+                </CommentPanel>
 
         </div>
     );

@@ -35,12 +35,24 @@ function Card(props) {
             <p>
                 {props.data.text || 'card text'}
             </p>
-            {user &&
-                <div className="user-panel">
-                    <h3 style={{background: user.color}}>{user.name[0]}</h3>
-                    <span>last: {props.data.updated}</span>
-                </div>
-            }
+
+            <div className="user-panel">
+                        {user && <h3 style={{background: user.color}}>{user.name[0]}</h3>}
+                        {!user && <h3>u</h3>}
+                    <span>
+                        {props.data.deadline && props.data.status !== "0" &&
+                            <span>
+                                {props.data.status === '1' &&
+                                    Math.floor((new Date(props.data.deadline) - new Date()) / 1000 / 60 / 60 / 42) + 'days'
+                                }
+                                {props.data.status === '2' &&
+                                    'done'
+                                }
+                            </span>
+                        }
+                    </span>
+            </div>
+
         </div>
     );
 }
