@@ -1,0 +1,17 @@
+
+
+
+.card-container {
+    margin: 10px 0;
+    background: #fff!important;
+    cursor: pointer;
+    user-select: none;
+}
+.card-container:hover {
+    background: #f5f5f5!important;
+}
+
+.card-info {
+    margin-top: 10px;
+}
+

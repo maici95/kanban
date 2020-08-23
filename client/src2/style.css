@@ -1,0 +1,21 @@
+* {
+    padding: 0;
+    margin: 0 auto;
+    list-style: none;
+}
+
+body {
+    background: #fefefe;
+    font-family: 'Baloo Tamma 2', cursive, Arial;
+    color: #444;
+
+
+}
+
+
+input {
+    padding: 5px;
+}
+button {
+    padding: 10px;
+}

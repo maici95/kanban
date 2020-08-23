@@ -5,17 +5,37 @@
 }
 
 body {
-    background: #fefefe;
     font-family: 'Baloo Tamma 2', cursive, Arial;
-    color: #444;
-
-
+    color: #555;
+    background: #253858;
 }
 
-
-input {
-    padding: 5px;
-}
-button {
+.container,
+.inline-container
+{
     padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #f5f5f5;
+}
+
+.inline-container {
+    display: flex;
+}
+.inline-container div {
+    float: left;
+    margin: 0;
+    width: 33%
+}
+
+.content-center {
+    display: flex;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.small-text {
+    font-size: 12px;
 }
