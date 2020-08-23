@@ -1,0 +1,25 @@
+
+
+.overview-container {
+    position: absolute;
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 10px;
+    overflow: auto;
+}
+
+
+.overview-container h2 {
+
+}
+
+.overview-container input,
+.overview-container select,
+.overview-container textarea
+{
+    width: 95%;
+    margin-bottom: 10px;
+}
+
+
+

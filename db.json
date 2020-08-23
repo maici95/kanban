@@ -2,33 +2,33 @@
 	"cards": [
 		{
 			"name": "CLEAN CODE! ONGOING",
-			"points": "10",
+			"points": "12",
 			"status": "1",
 			"text": "Rewrite most of the code!",
 			"userId": "2",
 			"updated": "2020-08-23",
 			"id": "12",
-			"deadline": "2020/12/1"
+			"deadline": "2020/12/10"
 		},
 		{
 			"name": "Add account feature",
 			"points": "0",
 			"status": "0",
 			"text": "User can create an account.",
-			"userId": "2",
-			"updated": "2020-08-22",
+			"userId": "4",
+			"updated": "2020-08-23",
 			"id": "13",
 			"deadline": "2020/09/20"
 		},
 		{
 			"name": "Add deadline to cards",
 			"points": "0",
-			"status": "2",
+			"status": "3",
 			"text": "Display remaining days on card before deadline. Show days remaining only on cards that are not in \"To Do\" column.",
 			"userId": "2",
 			"updated": "2020-08-23",
 			"id": "14",
-			"deadline": "2020/10/30"
+			"deadline": "2020/8/30"
 		},
 		{
 			"name": "Add priority to cards",
@@ -36,19 +36,19 @@
 			"status": "0",
 			"text": "Add priority to cards and order cards on columns by their priority.",
 			"userId": "2",
-			"updated": "2020-08-22",
-			"deadline": "0",
+			"updated": "2020-08-23",
+			"deadline": "0333",
 			"id": "15"
 		},
 		{
 			"name": "Add commenting feature to cards",
-			"points": "0",
-			"status": "1",
+			"points": "11",
+			"status": "2",
 			"text": "User can write, read, edit and delete comments on cards.\nEditing and deleting comments not possible since no account feature implemented yet.",
 			"userId": "2",
 			"updated": "2020-08-23",
-			"deadline": "2020/08/23",
-			"id": "16"
+			"deadline": "",
+			"id": 16
 		},
 		{
 			"name": "Draw statistics",
@@ -56,7 +56,7 @@
 			"status": "0",
 			"text": "Design and create statistics views to be shown on screen to users. Users can track their progress.",
 			"userId": "2",
-			"updated": "2020-08-22",
+			"updated": "2020-08-23",
 			"deadline": "0",
 			"id": "17"
 		},
@@ -123,11 +123,11 @@
 		{
 			"name": "Add comment count in card",
 			"points": "0",
-			"status": "2",
+			"status": "0",
 			"text": "Display count of comments card have in board view.",
-			"userId": "2",
+			"userId": "4",
 			"updated": "2020-08-23",
-			"deadline": "2020/8/23",
+			"deadline": "",
 			"id": "25"
 		},
 		{
@@ -139,6 +139,26 @@
 			"updated": "2020-08-23",
 			"deadline": "2020-08-23",
 			"id": "26"
+		},
+		{
+			"name": "Make columns customisable",
+			"points": "0",
+			"text": "User can create, delete or edit columns to their liking.",
+			"status": "0",
+			"deadline": "",
+			"userId": "2",
+			"updated": "2020-08-23",
+			"id": "27"
+		},
+		{
+			"name": "",
+			"points": "0",
+			"text": "",
+			"status": "2",
+			"deadline": "2021",
+			"userId": "2",
+			"updated": "2020-08-23",
+			"id": "29"
 		}
 	],
 	"users": [

@@ -10,6 +10,10 @@ body {
     background: #253858;
 }
 
+.container-right {
+    float: right;
+}
+
 .container,
 .inline-container
 {
@@ -32,6 +36,9 @@ body {
     display: flex;
 }
 
+.text-center {
+    text-align: center;
+}
 .text-right {
     text-align: right;
 }
@@ -39,3 +46,36 @@ body {
 .small-text {
     font-size: 12px;
 }
+.big-text {
+    font-size: 20px;
+}
+
+
+input,
+textarea,
+button
+{
+    font-family: 'Baloo Tamma 2', cursive, Arial;
+    color: #222;
+}
+
+
+input,
+textarea,
+select
+{
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+input:focus,
+select:focus
+{
+    outline: 0;
+}
+button {
+    padding: 5px 10px;
+}
+
+
+

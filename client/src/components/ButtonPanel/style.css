@@ -1,0 +1,25 @@
+
+
+
+.button-panel-container {
+    background: #fff!important;
+    margin: 10px 0;
+    overflow: auto;
+}
+
+.button-panel-container button {
+    margin-right: 10px;
+}
+
+
+.button-panel-right {
+    float: right;
+}
+
+.button-panel-right input {
+    width: 60px;
+    padding: 6px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: 0;
+}
