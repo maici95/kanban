@@ -10,6 +10,7 @@
     background: #fff;
     box-shadow: 2px 2px 4px #333;
     border-radius: 5px;
+    padding-bottom: 10px;
 }
 
 .card-overview-container h1 {

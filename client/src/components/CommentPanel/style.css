@@ -24,3 +24,14 @@
 
 
 
+.comment-panel-container textarea {
+    width: 90%;
+    min-height: 60px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.comment-panel-container textarea:focus {
+    outline: 0;
+}
+

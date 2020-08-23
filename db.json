@@ -1,13 +1,14 @@
 {
 	"cards": [
 		{
-			"name": "CLEAN CODE!",
-			"points": "100",
-			"status": "0",
+			"name": "CLEAN CODE! ONGOING",
+			"points": "10",
+			"status": "1",
 			"text": "Rewrite most of the code!",
 			"userId": "2",
-			"updated": "2020-08-22",
-			"id": "12"
+			"updated": "2020-08-23",
+			"id": "12",
+			"deadline": "2020/12/1"
 		},
 		{
 			"name": "Add account feature",
@@ -25,7 +26,7 @@
 			"status": "2",
 			"text": "Display remaining days on card before deadline. Show days remaining only on cards that are not in \"To Do\" column.",
 			"userId": "2",
-			"updated": "2020-08-22",
+			"updated": "2020-08-23",
 			"id": "14",
 			"deadline": "2020/10/30"
 		},
@@ -43,10 +44,10 @@
 			"name": "Add commenting feature to cards",
 			"points": "0",
 			"status": "1",
-			"text": "User can write, read, edit and delete comments on cards.",
+			"text": "User can write, read, edit and delete comments on cards.\nEditing and deleting comments not possible since no account feature implemented yet.",
 			"userId": "2",
-			"updated": "2020-08-22",
-			"deadline": "2020/08/24",
+			"updated": "2020-08-23",
+			"deadline": "2020/08/23",
 			"id": "16"
 		},
 		{
@@ -63,9 +64,9 @@
 			"name": "Improve cards' readability",
 			"points": "0",
 			"status": "0",
-			"text": "Implement pagination for cards or something similar",
+			"text": "Implement pagination for cards or something similar to improve board overall readability.",
 			"userId": "2",
-			"updated": "2020-08-22",
+			"updated": "2020-08-23",
 			"deadline": "0",
 			"id": "18"
 		},
@@ -100,14 +101,44 @@
 			"id": "22"
 		},
 		{
-			"name": "Test TODAY",
+			"name": "Create compact view for cards",
 			"points": "0",
-			"status": "1",
-			"text": "Seems to work",
+			"status": "0",
+			"text": "Display only vital information about card in compact view.",
 			"userId": "2",
-			"updated": "2020-08-22",
+			"updated": "2020-08-23",
 			"deadline": "0",
 			"id": "23"
+		},
+		{
+			"name": "Add card's relationship feature",
+			"points": "0",
+			"status": "0",
+			"text": "Cards can be linked together.",
+			"userId": "2",
+			"updated": "2020-08-23",
+			"deadline": "0",
+			"id": "24"
+		},
+		{
+			"name": "Add comment count in card",
+			"points": "0",
+			"status": "2",
+			"text": "Display count of comments card have in board view.",
+			"userId": "2",
+			"updated": "2020-08-23",
+			"deadline": "2020/8/23",
+			"id": "25"
+		},
+		{
+			"name": "Redesign UI",
+			"points": "0",
+			"status": "0",
+			"text": "",
+			"userId": "2",
+			"updated": "2020-08-23",
+			"deadline": "2020-08-23",
+			"id": "26"
 		}
 	],
 	"users": [
@@ -148,6 +179,27 @@
 			"userId": "2",
 			"updated": "2020-08-22",
 			"id": "3"
+		},
+		{
+			"cardId": "16",
+			"text": "Gotta get those account up and running...",
+			"userId": "2",
+			"updated": "2020-08-23",
+			"id": "4"
+		},
+		{
+			"cardId": "14",
+			"text": "test",
+			"userId": "2",
+			"updated": "2020-08-23",
+			"id": "5"
+		},
+		{
+			"cardId": "14",
+			"text": "twet2",
+			"userId": "2",
+			"updated": "2020-08-23",
+			"id": "6"
 		}
 	]
 }

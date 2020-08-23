@@ -48,7 +48,7 @@ function App() {
             text: '',
             userId: null,
             updated: null,
-            deadline: 0
+            deadline: new Date().toISOString().slice(0, 10)
         });
         data.then(res => {
             setAddCardStatus(false);

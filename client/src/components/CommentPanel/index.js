@@ -32,7 +32,6 @@ function CommentPanel(props) {
             <br/>
              <textarea
                 ref={textRef}
-                style={{width: '90%', minHeight: '60px', padding: '10px'}}
                 placeholder="your message..."
             ></textarea>
              <br/>

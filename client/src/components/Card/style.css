@@ -7,7 +7,7 @@
     border-radius: 5px;
     background: #fff;
 
-    box-shadow: 1px 1px 2px #ddd;
+    box-shadow: 1px 1px 4px #555;
 
     margin-bottom: 20px;
     cursor: pointer;
@@ -40,20 +40,19 @@
 }
 
 
-.user-panel {
-    
+.user-panel {    
     overflow: auto;
     width: 90%;
     padding: 20px 5px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .user-panel h3 {
-    float: left;
     width: 32px;
     height: 32px;
-
-    display: flex;
-    flex-flow: column-reverse;
 
     text-align: center;
     border-radius: 100%;
@@ -66,8 +65,14 @@
     border: 2px solid #333;
 }
 .user-panel span {
-    float: right;
     display: flex;
     line-height: 32px;
 }
+
+
+.comments-count {
+    font-weight: bold;
+
+}
+
 

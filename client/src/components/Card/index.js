@@ -12,6 +12,7 @@ Card.NewCard = NewCard;
 
 function Card(props) {
     const [user, setUser] = React.useState(null);
+    const [commentCount, setCommentCount] = React.useState(0);
 
     React.useEffect(() => {
         if (props.data.userId) {
@@ -20,6 +21,15 @@ function Card(props) {
             });
         }
     }, [props.data.userId]);
+
+    React.useEffect(() => {
+
+        const data = new ajax().get('comments', { cardId: props.data.id });
+        data.then(res => {
+            setCommentCount(res.length);
+        });
+
+    }, [props.data.id]);
 
     const days = Math.floor((new Date(props.data.deadline) - new Date()) / 1000 / 60 / 60 / 24);
 
@@ -40,14 +50,22 @@ function Card(props) {
             <div className="user-panel">
                         {user && <h3 style={{background: user.color}}>{user.name[0]}</h3>}
                         {!user && <h3>u</h3>}
+
+                    <div className="comments-count">
+                        {commentCount > 0 &&
+                            <span role="img" aria-label="comments">&#128172; {commentCount}</span>
+                        }
+                    </div>
                     <span>
                         {props.data.deadline && props.data.status !== "0" &&
                             <span>
                                 {props.data.status === '1' &&
-                                    (days > 0 ? days + ' days' : 'TODAY')
+                                    (days + 1 > 0 ? days + 1 + (days > 1 ? ' days' : ' day')
+                                        : days < -1 ? 'EXPIRED'
+                                        : 'TODAY')
                                 }
                                 {props.data.status === '2' &&
-                                    'done'
+                                    'DONE'
                                 }
                             </span>
                         }
