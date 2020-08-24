@@ -25,6 +25,7 @@ export default function Board(props) {
 
     function openCard(id) {
         setCardId(id);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     return (

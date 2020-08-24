@@ -7,8 +7,10 @@ import React from 'react';
 import './style.css';
 import ajax from '../../../../ajax';
 import ButtonPanel from '../../../ButtonPanel';
+import CommentPanel from './CommentPanel';
+import Comment from './CommentPanel/Comment';
 
-
+const USERID = 2;
 
 export default function Overview(props) {
 
@@ -17,6 +19,8 @@ export default function Overview(props) {
     const delRef = React.useRef(null);
     const [delBtn, setDelBtn] = React.useState(true);
     const [users, setUsers] = React.useState([]);
+    const [comments, setComments] = React.useState([]);
+    const [rel, setRel] = React.useState(false);
 
     React.useEffect(() => {
         new ajax().get('cards', { id: props.id }).then(res => {
@@ -25,7 +29,10 @@ export default function Overview(props) {
         new ajax().get('users').then(res => {
             setUsers(res);
         });
-    }, [props.id]);
+        new ajax().get('comments', { cardId: props.id }).then(res => {
+            setComments(res);
+        });
+    }, [props.id, rel]);
 
     React.useEffect(() => {
         document.getElementById('cardStatus').value = card.status;
@@ -55,6 +62,17 @@ export default function Overview(props) {
     function handleDelete() {
         new ajax().delete('cards', { id: props.id });
         props.close();
+    }
+
+    function postComment(comment) {
+        const body = {
+            cardId: props.id,
+            text: comment,
+            userId: USERID
+        }
+        new ajax().post('comments', body).then(res => {
+            setRel(!rel);
+        });
     }
 
     return (
@@ -96,6 +114,23 @@ export default function Overview(props) {
                 </ButtonPanel.Right>
             </ButtonPanel>
 
+            <hr/>
+            
+            <h2>Comments:</h2>
+            <CommentPanel
+                post={postComment}
+            >
+                {comments.map((comment, index) => {
+                    return (
+                        <Comment
+                            updated={comment.updated}
+                            userId={comment.userId}
+                            key={index}>
+                            <Comment.Content>{comment.text}</Comment.Content>
+                        </Comment>
+                    );
+                })}
+            </CommentPanel>
         </div>
     );
 }

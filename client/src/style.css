@@ -69,13 +69,29 @@ select
     border-radius: 5px;
 }
 input:focus,
-select:focus
+select:focus,
+textarea:focus
 {
     outline: 0;
 }
 button {
     padding: 5px 10px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+button:hover {
+    background: #dedede;
+}
+button:disabled {
+    background: #dedede;
+    color: #999;
+    cursor: not-allowed;
 }
 
+
+hr {
+    border: 1px solid #ddd;
+    margin: 20px 0;
+}
 
 
