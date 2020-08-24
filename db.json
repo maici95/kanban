@@ -1,85 +1,164 @@
 {
 	"cards": [
 		{
-			"id": 1,
-			"name": "Add new card feature",
-			"points": "2",
-			"status": "0",
-			"text": "User can add new card to the board.",
-			"userId": "2",
-			"updated": "2020-08-22"
-		},
-		{
-			"id": 2,
-			"name": "Clean code",
-			"points": "10",
-			"status": "0",
-			"text": "Code needs reworking",
-			"userId": "5",
-			"updated": "2020-08-22"
-		},
-		{
-			"id": 3,
-			"name": "Card number 3",
-			"points": "4",
-			"status": "2",
-			"text": "Replacing text for this textarea",
-			"userId": "2",
-			"updated": "2020-08-21"
-		},
-		{
-			"id": 4,
-			"name": "vulputate vitae nisl aenean lectus",
-			"points": "4",
+			"name": "CLEAN CODE! ONGOING",
+			"points": "12",
 			"status": "1",
-			"text": "nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat eros viverra eget congue eget semper rutrum nulla",
+			"text": "Rewrite most of the code!",
+			"userId": "2",
+			"updated": "2020-08-24",
+			"id": "12",
+			"deadline": "2020/12/01"
+		},
+		{
+			"name": "Add account feature",
+			"points": "0",
+			"status": "0",
+			"text": "User can create an account.",
 			"userId": "4",
-			"updated": "2020-08-22"
+			"updated": "2020-08-23",
+			"id": "13",
+			"deadline": "2020/09/20"
 		},
 		{
-			"id": 5,
-			"name": "Add card delete feature",
-			"points": "4",
-			"status": "2",
-			"text": "dui proin leo odio porttitor id consequat in consequat ut nulla sed accumsan",
+			"name": "Add deadline to cards",
+			"points": "0",
+			"status": "3",
+			"text": "Display remaining days on card before deadline. Show days remaining only on cards that are not in \"To Do\" column.",
 			"userId": "2",
-			"updated": "2020-08-22"
+			"updated": "2020-08-23",
+			"id": "14",
+			"deadline": "2020/8/30"
 		},
 		{
-			"id": 6,
-			"name": "semper test nulla nunc purus phasellus",
-			"points": "5",
+			"name": "Add priority to cards",
+			"points": "0",
 			"status": "0",
-			"text": "in faucibus orci luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est",
+			"text": "Add priority to cards and order cards on columns by their priority.",
 			"userId": "2",
-			"updated": "2020-08-21"
+			"updated": "2020-08-23",
+			"deadline": "0333",
+			"id": "15"
 		},
 		{
-			"id": 7,
-			"name": "ante ipsum primis in faucibus orci",
-			"points": "4",
+			"name": "Add commenting feature to cards",
+			"points": "11",
+			"status": "2",
+			"text": "User can write, read, edit and delete comments on cards.\nEditing and deleting comments not possible since no account feature implemented yet.",
+			"userId": "2",
+			"updated": "2020-08-23",
+			"deadline": "",
+			"id": 16
+		},
+		{
+			"name": "Draw statistics",
+			"points": "0",
 			"status": "0",
-			"text": "sit amet lobortis sapien sapien non mi integer ac neque duis bibendum morbi non quam",
+			"text": "Design and create statistics views to be shown on screen to users. Users can track their progress.",
 			"userId": "2",
-			"updated": "2020-08-21"
+			"updated": "2020-08-23",
+			"deadline": "0",
+			"id": "17"
 		},
 		{
-			"id": 8,
-			"name": "Create json server",
-			"points": "45",
-			"status": "2",
-			"text": "sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus etiam vel augue vestibulum rutrum",
+			"name": "Improve cards' readability",
+			"points": "0",
+			"status": "0",
+			"text": "Implement pagination for cards or something similar to improve board overall readability.",
 			"userId": "2",
-			"updated": "2020-08-21"
+			"updated": "2020-08-23",
+			"deadline": "0",
+			"id": "18"
 		},
 		{
-			"name": "test add card feature",
-			"points": "2",
-			"status": "2",
-			"text": "",
+			"name": "Make columns customisable",
+			"points": "0",
+			"status": "0",
+			"text": "User can create, delete or edit columns to their liking.",
 			"userId": "2",
 			"updated": "2020-08-22",
-			"id": "10"
+			"deadline": "0",
+			"id": "19"
+		},
+		{
+			"name": "Add dragging to cards",
+			"points": "0",
+			"status": "0",
+			"text": "User can drag cards to columns",
+			"userId": "2",
+			"updated": "2020-08-22",
+			"deadline": "0",
+			"id": "20"
+		},
+		{
+			"name": "Add notification system",
+			"points": "0",
+			"status": "0",
+			"text": "Give feedback to user after action. Example after posting comment display message to user if action was succesfully or and error occured.",
+			"userId": "2",
+			"updated": "2020-08-22",
+			"deadline": "0",
+			"id": "22"
+		},
+		{
+			"name": "Create compact view for cards",
+			"points": "0",
+			"status": "0",
+			"text": "Display only vital information about card in compact view.",
+			"userId": "2",
+			"updated": "2020-08-23",
+			"deadline": "0",
+			"id": "23"
+		},
+		{
+			"name": "Add card's relationship feature",
+			"points": "0",
+			"status": "0",
+			"text": "Cards can be linked together.",
+			"userId": "2",
+			"updated": "2020-08-23",
+			"deadline": "0",
+			"id": "24"
+		},
+		{
+			"name": "Add comment count in card",
+			"points": "0",
+			"status": "0",
+			"text": "Display count of comments card have in board view.",
+			"userId": "4",
+			"updated": "2020-08-23",
+			"deadline": "",
+			"id": "25"
+		},
+		{
+			"name": "Redesign UI",
+			"points": "0",
+			"status": "0",
+			"text": "",
+			"userId": "2",
+			"updated": "2020-08-23",
+			"deadline": "2020-08-23",
+			"id": "26"
+		},
+		{
+			"name": "Make columns customisable",
+			"points": "0",
+			"text": "User can create, delete or edit columns to their liking.",
+			"status": "0",
+			"deadline": "",
+			"userId": "2",
+			"updated": "2020-08-23",
+			"id": "27"
+		},
+		{
+			"name": "test card",
+			"points": "0",
+			"text": "",
+			"status": "2",
+			"deadline": "2021",
+			"userId": "2",
+			"updated": "2020-08-24",
+			"id": "29"
 		}
 	],
 	"users": [
@@ -97,6 +176,71 @@
 			"id": 5,
 			"name": "johana",
 			"color": "#46E4C1"
+		}
+	],
+	"comments": [
+		{
+			"cardId": "21",
+			"text": "",
+			"userId": "2",
+			"updated": "2020-08-22",
+			"id": "1"
+		},
+		{
+			"cardId": "21",
+			"text": "tee",
+			"userId": "2",
+			"updated": "2020-08-22",
+			"id": "2"
+		},
+		{
+			"cardId": "23",
+			"text": "Testing commenting...",
+			"userId": "2",
+			"updated": "2020-08-22",
+			"id": "3"
+		},
+		{
+			"cardId": "16",
+			"text": "Gotta get those accounts up and running...",
+			"userId": "2",
+			"updated": "2020-08-23",
+			"id": "4"
+		},
+		{
+			"cardId": "14",
+			"text": "test",
+			"userId": "2",
+			"updated": "2020-08-23",
+			"id": "5"
+		},
+		{
+			"cardId": "14",
+			"text": "twet2",
+			"userId": "2",
+			"updated": "2020-08-23",
+			"id": "6"
+		},
+		{
+			"cardId": "29",
+			"text": "test",
+			"userId": 2,
+			"updated": "2020-08-24",
+			"id": "7"
+		},
+		{
+			"cardId": "29",
+			"text": "test2",
+			"userId": 2,
+			"updated": "2020-08-24",
+			"id": "8"
+		},
+		{
+			"cardId": "29",
+			"text": "empty test",
+			"userId": 2,
+			"updated": "2020-08-24",
+			"id": "9"
 		}
 	]
 }

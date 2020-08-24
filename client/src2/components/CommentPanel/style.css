@@ -1,0 +1,37 @@
+
+
+
+
+.comment-panel-container {
+    width: 90%;
+    border-top: 2px dashed #ddd;
+    padding: 10px 0;
+}
+
+.comment-panel-container h1 {
+    font-size: 20px;
+    padding: 0;
+    padding-top: 10px;
+}
+
+.comment-container {
+    border: 1px solid #ddd;
+    padding: 5px;
+    border-radius: 5px;
+    background: #F4F4F4;
+    margin-bottom: 5px;
+}
+
+
+
+.comment-panel-container textarea {
+    width: 90%;
+    min-height: 60px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.comment-panel-container textarea:focus {
+    outline: 0;
+}
+

@@ -1,0 +1,23 @@
+
+
+
+.board-container {
+    display: flex;
+    background: #fff;
+
+
+
+
+}
+
+.col-header {
+    font-size: 24px;
+}
+
+.col-container {
+    float: left;
+    width: 100%;
+    max-width: 320px;
+    margin: 10px;
+}
+

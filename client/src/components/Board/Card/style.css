@@ -1,0 +1,35 @@
+
+
+
+.card-container {
+    margin: 10px 0;
+    background: #fff!important;
+    cursor: pointer;
+    user-select: none;
+}
+.card-container:hover {
+    background: #f5f5f5!important;
+}
+
+.card-info {
+    margin-top: 10px;
+}
+
+
+.new-card-btn {
+    background: #fff!important;
+    padding: 0!important;
+    cursor: pointer;
+}
+.new-card-btn:hover {
+    background: #ddd!important;
+}
+
+
+.new-card-container input {
+    padding: 0 6px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: 0;
+}
+
