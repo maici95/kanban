@@ -6,9 +6,9 @@
 			"status": "1",
 			"text": "Rewrite most of the code!",
 			"userId": "2",
-			"updated": "2020-08-24",
+			"updated": "2020-08-26",
 			"id": "12",
-			"deadline": "2020/12/01"
+			"deadline": "2020-12-1"
 		},
 		{
 			"name": "Add account feature",
@@ -46,8 +46,8 @@
 			"status": "2",
 			"text": "User can write, read, edit and delete comments on cards.\nEditing and deleting comments not possible since no account feature implemented yet.",
 			"userId": "2",
-			"updated": "2020-08-23",
-			"deadline": "",
+			"updated": "2020-08-26",
+			"deadline": null,
 			"id": 16
 		},
 		{
@@ -103,11 +103,11 @@
 		{
 			"name": "Create compact view for cards",
 			"points": "0",
-			"status": "0",
+			"status": "1",
 			"text": "Display only vital information about card in compact view.",
 			"userId": "2",
-			"updated": "2020-08-23",
-			"deadline": "0",
+			"updated": "2020-08-26",
+			"deadline": "2020-08-27",
 			"id": "23"
 		},
 		{
@@ -157,8 +157,18 @@
 			"status": "2",
 			"deadline": "2021",
 			"userId": "2",
-			"updated": "2020-08-24",
+			"updated": "2020-08-26",
 			"id": "29"
+		},
+		{
+			"name": "Add comments to the code",
+			"points": "0",
+			"text": "",
+			"status": "0",
+			"deadline": null,
+			"userId": "",
+			"updated": "2020-08-26",
+			"id": "30"
 		}
 	],
 	"users": [
@@ -241,6 +251,13 @@
 			"userId": 2,
 			"updated": "2020-08-24",
 			"id": "9"
+		},
+		{
+			"cardId": "14",
+			"text": "Date picker added.",
+			"userId": 2,
+			"updated": "2020-08-26",
+			"id": "10"
 		}
 	]
 }

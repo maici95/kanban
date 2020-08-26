@@ -9,6 +9,7 @@ import ajax from '../../../../ajax';
 import ButtonPanel from '../../../ButtonPanel';
 import CommentPanel from './CommentPanel';
 import Comment from './CommentPanel/Comment';
+import DatePicker from '../../../DatePicker';
 
 const USERID = 2;
 
@@ -21,6 +22,8 @@ export default function Overview(props) {
     const [users, setUsers] = React.useState([]);
     const [comments, setComments] = React.useState([]);
     const [rel, setRel] = React.useState(false);
+
+    const [deadline, setDeadline] = React.useState(null);
 
     React.useEffect(() => {
         new ajax().get('cards', { id: props.id }).then(res => {
@@ -41,7 +44,8 @@ export default function Overview(props) {
 
     function postForm() {
         const object = {
-            id: props.id
+            id: props.id,
+            deadline: deadline
         };
         ([...formRef.current.children]).forEach((input, key) => {
             if (input.type && (input.type).match(/text|textarea|select-one/)) {
@@ -92,8 +96,13 @@ export default function Overview(props) {
                             );
                         })}
                     </select>
-                <h2>Deadline:</h2>
-                    <input defaultValue={card.deadline} name="deadline" placeholder="yyyy/mm/dd" />
+                    <h2>Deadline:</h2>
+                    <DatePicker
+                        date={card.deadline}
+                        onChange={(date) => setDeadline(date)}
+                    />
+{/*                 <h2>Deadline:</h2>
+                    <input defaultValue={card.deadline} name="deadline" placeholder="yyyy/mm/dd" /> */}
                 <h2>Assign to:</h2>
                     <select id="cardAssignTo" defaultValue={card.userId} name="userId">
                         {users.map((user, index) => {

@@ -8,6 +8,7 @@ import './style.css';
 import ajax from '../../ajax';
 import Card from './Card';
 
+Board.Menu = Menu;
 Board.Col = Col;
 Board.Header = Header;
 
@@ -22,6 +23,7 @@ export default function Board(props) {
 
     const [cardId, setCardId] = React.useState(null);
     const [rel, setRel] = React.useState(false);
+    const [compactView, setCompactView] = React.useState(false);
 
     function openCard(id) {
         setCardId(id);
@@ -30,6 +32,9 @@ export default function Board(props) {
 
     return (
         <div className="board-container">
+            <Board.Menu>
+                <button onClick={() => setCompactView(!compactView)}>{compactView ? 'compact off' : 'compact on'}</button>
+            </Board.Menu>
             {cardId &&
                 <Card.Overview
                     id={cardId}
@@ -47,11 +52,23 @@ export default function Board(props) {
                         openCard={openCard}
                         reload={rel}
                         id={index}
+                        compactView={compactView}
                     >
                         <Board.Header>{col.name}</Board.Header>
                     </Board.Col>
                 );
             })}
+        </div>
+    );
+}
+
+function Menu(props) {
+
+    //const [miniMenu, setMiniMenu] = React.useState(false);
+
+    return (
+        <div className="board-menu container">
+            {props.children}
         </div>
     );
 }
@@ -84,7 +101,7 @@ function Col(props) {
                         id={card.id}
                     >
                         <Card.Header><b>#{card.id}</b> {card.name}</Card.Header>
-                        <Card.Text>{card.text}</Card.Text>
+                        {!props.compactView && <Card.Text>{card.text}</Card.Text>}
                         <Card.Info
                             card={{
                                 id: card.id,
