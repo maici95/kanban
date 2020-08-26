@@ -8,7 +8,8 @@
 			"userId": "2",
 			"updated": "2020-08-26",
 			"id": "12",
-			"deadline": "2020-12-1"
+			"deadline": null,
+			"priority": "1"
 		},
 		{
 			"name": "Add account feature",
@@ -16,9 +17,10 @@
 			"status": "0",
 			"text": "User can create an account.",
 			"userId": "4",
-			"updated": "2020-08-23",
+			"updated": "2020-08-26",
 			"id": "13",
-			"deadline": "2020/09/20"
+			"deadline": null,
+			"priority": "2"
 		},
 		{
 			"name": "Add deadline to cards",
@@ -33,12 +35,13 @@
 		{
 			"name": "Add priority to cards",
 			"points": "0",
-			"status": "0",
+			"status": "3",
 			"text": "Add priority to cards and order cards on columns by their priority.",
 			"userId": "2",
-			"updated": "2020-08-23",
-			"deadline": "0333",
-			"id": "15"
+			"updated": "2020-08-26",
+			"deadline": null,
+			"id": "15",
+			"priority": "3"
 		},
 		{
 			"name": "Add commenting feature to cards",
@@ -48,7 +51,8 @@
 			"userId": "2",
 			"updated": "2020-08-26",
 			"deadline": null,
-			"id": 16
+			"id": 16,
+			"priority": "2"
 		},
 		{
 			"name": "Draw statistics",
@@ -56,9 +60,10 @@
 			"status": "0",
 			"text": "Design and create statistics views to be shown on screen to users. Users can track their progress.",
 			"userId": "2",
-			"updated": "2020-08-23",
-			"deadline": "0",
-			"id": "17"
+			"updated": "2020-08-26",
+			"deadline": null,
+			"id": "17",
+			"priority": "1"
 		},
 		{
 			"name": "Improve cards' readability",
@@ -66,9 +71,10 @@
 			"status": "0",
 			"text": "Implement pagination for cards or something similar to improve board overall readability.",
 			"userId": "2",
-			"updated": "2020-08-23",
-			"deadline": "0",
-			"id": "18"
+			"updated": "2020-08-26",
+			"deadline": null,
+			"id": "18",
+			"priority": "1"
 		},
 		{
 			"name": "Make columns customisable",
@@ -76,9 +82,10 @@
 			"status": "0",
 			"text": "User can create, delete or edit columns to their liking.",
 			"userId": "2",
-			"updated": "2020-08-22",
-			"deadline": "0",
-			"id": "19"
+			"updated": "2020-08-26",
+			"deadline": null,
+			"id": "19",
+			"priority": "4"
 		},
 		{
 			"name": "Add dragging to cards",
@@ -86,9 +93,10 @@
 			"status": "0",
 			"text": "User can drag cards to columns",
 			"userId": "2",
-			"updated": "2020-08-22",
-			"deadline": "0",
-			"id": "20"
+			"updated": "2020-08-26",
+			"deadline": null,
+			"id": "20",
+			"priority": "2"
 		},
 		{
 			"name": "Add notification system",
@@ -96,18 +104,19 @@
 			"status": "0",
 			"text": "Give feedback to user after action. Example after posting comment display message to user if action was succesfully or and error occured.",
 			"userId": "2",
-			"updated": "2020-08-22",
-			"deadline": "0",
-			"id": "22"
+			"updated": "2020-08-26",
+			"deadline": null,
+			"id": "22",
+			"priority": "1"
 		},
 		{
 			"name": "Create compact view for cards",
 			"points": "0",
-			"status": "1",
+			"status": "3",
 			"text": "Display only vital information about card in compact view.",
 			"userId": "2",
 			"updated": "2020-08-26",
-			"deadline": "2020-08-27",
+			"deadline": null,
 			"id": "23"
 		},
 		{
@@ -151,24 +160,15 @@
 			"id": "27"
 		},
 		{
-			"name": "test card",
-			"points": "0",
-			"text": "",
-			"status": "2",
-			"deadline": "2021",
-			"userId": "2",
-			"updated": "2020-08-26",
-			"id": "29"
-		},
-		{
 			"name": "Add comments to the code",
 			"points": "0",
 			"text": "",
 			"status": "0",
 			"deadline": null,
-			"userId": "",
+			"userId": "2",
 			"updated": "2020-08-26",
-			"id": "30"
+			"id": "30",
+			"priority": "5"
 		}
 	],
 	"users": [

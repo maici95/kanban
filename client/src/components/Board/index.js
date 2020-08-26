@@ -81,7 +81,9 @@ function Col(props) {
 
     React.useEffect(() => {
         new ajax().get('cards', { status: props.status }).then(res => {
-            setCards(res);
+            let c = res;
+            c = c.sort((a, b) => a.priority - b.priority);
+            setCards(c);
         });
     }, [props.status, props.reload, rel]);
 
@@ -107,7 +109,8 @@ function Col(props) {
                                 id: card.id,
                                 userId: card.userId,
                                 deadline: card.deadline,
-                                status: card.status
+                                status: card.status,
+                                priority: card.priority
                             }}
                         ></Card.Info>
                     </Card>

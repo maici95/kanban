@@ -40,6 +40,7 @@ export default function Overview(props) {
     React.useEffect(() => {
         document.getElementById('cardStatus').value = card.status;
         document.getElementById('cardAssignTo').value = card.userId;
+        document.getElementById('cardPriority').value = card.priority;
     }, [card, users]);
 
     function postForm() {
@@ -88,6 +89,15 @@ export default function Overview(props) {
                     <input name="points" defaultValue={card.points} placeholder="Story points..." />
                 <h2>Card description:</h2>
                     <textarea name="text" defaultValue={card.text} rows="4" placeholder="Card text..."></textarea>
+                <h2>Card priority:</h2>
+                    {/* <input name="priority" defaultValue={card.priority} placeholder="Card priority..." /> */}
+                    <select id="cardPriority" name="priority" defaultValue={card.priority}>
+                        {[/* 1, 2, 3, 4, 5 */'Critical', 'High', 'Normal', 'Low', 'None'].map((p, index) => {
+                            return (
+                                <option key={index} value={index + 1}>{p}</option>
+                            );
+                        })}
+                    </select>
                 <h2>Card status:</h2>
                     <select id="cardStatus" name="status" defaultValue={card.status}>
                         {props.cols.map((col, index) => {
