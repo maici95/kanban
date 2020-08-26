@@ -6,9 +6,9 @@
 			"status": "1",
 			"text": "Rewrite most of the code!",
 			"userId": "2",
-			"updated": "2020-08-24",
+			"updated": "2020-08-26",
 			"id": "12",
-			"deadline": "2020/12/01"
+			"deadline": "2020-12-1"
 		},
 		{
 			"name": "Add account feature",
@@ -157,7 +157,7 @@
 			"status": "2",
 			"deadline": "2021",
 			"userId": "2",
-			"updated": "2020-08-24",
+			"updated": "2020-08-26",
 			"id": "29"
 		}
 	],
@@ -241,6 +241,13 @@
 			"userId": 2,
 			"updated": "2020-08-24",
 			"id": "9"
+		},
+		{
+			"cardId": "14",
+			"text": "Date picker added.",
+			"userId": 2,
+			"updated": "2020-08-26",
+			"id": "10"
 		}
 	]
 }
