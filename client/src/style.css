@@ -70,7 +70,8 @@ select
 }
 input:focus,
 select:focus,
-textarea:focus
+textarea:focus,
+button:focus
 {
     outline: 0;
 }
