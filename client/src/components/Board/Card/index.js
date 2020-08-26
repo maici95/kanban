@@ -28,7 +28,7 @@ export default function Card(props) {
 function Header(props) {
 
     return (
-        <div>
+        <div className="big-text">
             {props.children}
         </div>
     );
@@ -67,8 +67,19 @@ function Info(props) {
         : days + ' days'
     );
 
+    const getPrioColor = prio => ({
+        '1': '#EB5A46',
+        '2': '#FEAB4A',
+        '3': '#F2D604',
+        '4': '#60BD4F',
+        '5': '#0079BF',
+        'undefined': '#0079BF'
+    }[prio]);
+
     return (
-        <div className="inline-container small-text card-info">
+        <div className="inline-container small-text card-info"
+            style={{background: getPrioColor(props.card.priority)}}
+        >
             <div>{user && user.name}</div>
             <div>
                 {comCount > 0 &&
@@ -96,6 +107,7 @@ function NewCard(props) {
             status: props.colId,
             deadline: "0",
             userId: "",
+            priority: 0,
             updated: new Date().toISOString().slice(0, 10)
         }
         new ajax().post('cards', body).then(res => {

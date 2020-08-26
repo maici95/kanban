@@ -21,6 +21,7 @@ export default function CommentPanel(props) {
             {props.children}
 
             <textarea ref={textRef} placeholder="your message..."></textarea>
+            <br/>
             <button onClick={handlePost}>post</button>
         </div>
     );

@@ -57,9 +57,9 @@ export default function DatePicker(props) {
     }
 
     function setDays() {
-        const date = new Date(year, month - 1, 0);
+        const date = new Date(year, month, 0);
         const days = date.getDate();
-        const offset = new Date(year, month - 1, 1).getDay();
+        const offset = new Date(year, month, 1).getDay();
         const xDays = Array(offset).fill('');
         setCalendarDays([
             ...xDays,
@@ -72,7 +72,11 @@ export default function DatePicker(props) {
         const date = new Date(event.target.value).toString();
         if (date === 'Invalid Date') {
             color = '#CC3300';
+        } else {
+            setYear(new Date(date).getFullYear());
+            setMonth(new Date(date).getMonth() + 1);
         }
+
         event.target.style.color = color;
         props.onChange && props.onChange(event.target.value);
     }

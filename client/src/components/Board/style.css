@@ -4,6 +4,7 @@
 .board-container {
     display: flex;
     background: #fff;
+    overflow: auto;
 }
 
 .col-header {
@@ -13,7 +14,7 @@
 .col-container {
     float: left;
     width: 100%;
-    max-width: 320px;
+    max-width: 400px;
     margin: 10px;
 }
 
