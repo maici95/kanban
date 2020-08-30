@@ -108,6 +108,7 @@ function NewCard(props) {
             deadline: "0",
             userId: "",
             priority: 0,
+            category: null,
             updated: new Date().toISOString().slice(0, 10)
         }
         new ajax().post('cards', body).then(res => {

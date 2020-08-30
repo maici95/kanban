@@ -19,11 +19,20 @@ const cols = [
     { name: 'Completed', status: "3" }
 ];
 
+const cats = [
+    { name: 'lisätty virtuaali todellisuus', id: 0, color: '#F7A51D' },
+    { name: 'web ohjelmointi', id: 1, color: '#FEED00' },
+    { name: 'pelien tekoäly', id: 2, color: '#60B706' },
+    { name: '4', id: 2, color: '#0094DA' },
+    { name: '5', id: 2, color: '#930374' },
+    { name: '6', id: 2, color: '#FF0000' },
+];
+
 export default function Board(props) {
 
     const [cardId, setCardId] = React.useState(null);
     const [rel, setRel] = React.useState(false);
-    const [compactView, setCompactView] = React.useState(false);
+    const [compactView, setCompactView] = React.useState(true);
 
     function openCard(id) {
         setCardId(id);
@@ -39,6 +48,7 @@ export default function Board(props) {
                 <Card.Overview
                     id={cardId}
                     cols={cols}
+                    cats={cats}
                     close={() => {
                         setCardId(null);
                         setRel(!rel);
@@ -113,6 +123,20 @@ function Col(props) {
                                 priority: card.priority
                             }}
                         ></Card.Info>
+                        <Card.Header>
+                            <div className="container small-text"
+                                style={{
+                                    borderTop: card.category && '8px solid ' + cats[card.category].color,
+                                    color: '#fff',
+                                    padding: '0 10px',
+                                    fontSize: '14px',
+                                    background: '#333',
+                                    marginTop: '5px'
+                                }}
+                            >
+                                {card.category && '#' + cats[card.category].id +' '+ cats[card.category].name}
+                            </div>
+                        </Card.Header>
                     </Card>
                 );
             })}
