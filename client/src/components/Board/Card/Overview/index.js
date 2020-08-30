@@ -41,6 +41,8 @@ export default function Overview(props) {
         document.getElementById('cardStatus').value = card.status;
         document.getElementById('cardAssignTo').value = card.userId;
         document.getElementById('cardPriority').value = card.priority;
+        document.getElementById('cardCategory').value = card.category;
+        setDeadline(card.deadline);
     }, [card, users]);
 
     function postForm() {
@@ -89,6 +91,14 @@ export default function Overview(props) {
                     <input name="points" defaultValue={card.points} placeholder="Story points..." />
                 <h2>Card description:</h2>
                     <textarea name="text" defaultValue={card.text} rows="4" placeholder="Card text..."></textarea>
+                <h2>Category:</h2>
+                    <select id="cardCategory" name="category" defaultValue={card.category}>
+                        {props.cats.map((cat, index) => {
+                            return (
+                                <option key={index} value={index}>{cat.name}</option>
+                            );
+                        })}
+                    </select>
                 <h2>Card priority:</h2>
                     {/* <input name="priority" defaultValue={card.priority} placeholder="Card priority..." /> */}
                     <select id="cardPriority" name="priority" defaultValue={card.priority}>
