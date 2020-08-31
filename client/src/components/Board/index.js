@@ -73,9 +73,7 @@ export default function Board(props) {
 }
 
 function Menu(props) {
-
     //const [miniMenu, setMiniMenu] = React.useState(false);
-
     return (
         <div className="board-menu container">
             {props.children}
@@ -126,7 +124,9 @@ function Col(props) {
                         <Card.Header>
                             <div className="container small-text"
                                 style={{
-                                    borderTop: card.category && '8px solid ' + cats[card.category].color,
+                                    border: 0,
+                                    borderRadius: 0,
+                                    borderBottom: card.category && '3px solid ' + cats[card.category].color,
                                     color: '#fff',
                                     padding: '0 10px',
                                     fontSize: '14px',
@@ -134,7 +134,7 @@ function Col(props) {
                                     marginTop: '5px'
                                 }}
                             >
-                                {card.category && '#' + cats[card.category].id +' '+ cats[card.category].name}
+                                {card.category && /* '#' + cats[card.category].id +' '+  */cats[card.category].name}
                             </div>
                         </Card.Header>
                     </Card>
