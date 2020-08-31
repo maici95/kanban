@@ -3,7 +3,7 @@
 
 .board-container {
     display: flex;
-    background: ;
+    background: none;
     overflow: auto;
 }
 
